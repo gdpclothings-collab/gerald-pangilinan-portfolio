@@ -35,7 +35,7 @@
       <button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
         <span class="theme-icon" aria-hidden="true">◐</span>
       </button>
-      <a class="button button-small button-ghost desktop-only" href="Gerald-Pangilinan-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+      <a class="button button-small button-ghost desktop-only" href="resume.html" target="_blank" rel="noopener">Résumé ↗</a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
         <span></span><span></span>
       </button>
@@ -47,7 +47,7 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
-    <a href="Gerald-Pangilinan-Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    <a href="resume.html" target="_blank" rel="noopener">Résumé ↗</a>
   </div>
 
   <main id="main">
@@ -115,7 +115,17 @@
 
       <article class="case-study case-study-featured reveal">
         <div class="case-visual case-visual-glassflow">
-          <img src="assets/glassflow-dashboard.webp" alt="Glass Flow ERP dashboard interface" width="1800" height="883" loading="lazy" />
+          <div class="system-preview" aria-label="Glass Flow ERP interface preview">
+            <div class="preview-bar"><span class="preview-brand">GLASS FLOW</span><span>Dashboard</span><span>Inventory</span><span>Orders</span><i></i></div>
+            <div class="preview-body">
+              <div class="preview-sidebar"><b></b><b></b><b></b><b></b><b></b></div>
+              <div class="preview-main">
+                <div class="preview-title"><div><small>OPERATIONS OVERVIEW</small><strong>Warehouse Dashboard</strong></div><em>Live</em></div>
+                <div class="metric-grid"><div><small>Available stock</small><strong>2,847</strong><span>Inventory</span></div><div><small>Orders today</small><strong>36</strong><span>Fulfillment</span></div><div><small>Low stock</small><strong>18</strong><span>Needs review</span></div></div>
+                <div class="preview-lower"><div class="chart-card"><span class="chart-line"></span><span class="chart-line l2"></span><span class="chart-line l3"></span><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div><div class="activity-card"><b>Recent activity</b><span>Order #1048 picked</span><span>FW-209 moved → A3</span><span>Receiving completed</span></div></div>
+              </div>
+            </div>
+          </div>
           <div class="visual-label mono">GLASS FLOW ERP / DASHBOARD</div>
         </div>
         <div class="case-content">
@@ -134,8 +144,13 @@
 
       <div class="case-grid">
         <article class="case-study reveal">
-          <div class="case-visual tall-visual">
-            <img src="assets/gdp-homepage.webp" alt="GDP Clothing ecommerce homepage concept" width="1024" height="1536" loading="lazy" />
+          <div class="case-visual tall-visual commerce-visual">
+            <div class="commerce-preview" aria-label="GDP Clothing ecommerce preview">
+              <div class="commerce-nav"><strong>GDP</strong><span>SHOP</span><span>CUSTOM</span><span>ABOUT</span><i>◯</i></div>
+              <div class="commerce-hero"><small>GOOD PEOPLE · DOPE CLOTHES</small><h4>WEAR<br>YOUR<br>STORY.</h4><a>SHOP NOW →</a></div>
+              <div class="commerce-cards"><div><i>01</i><strong>TEES</strong></div><div><i>02</i><strong>CUSTOM</strong></div><div><i>03</i><strong>DTF</strong></div></div>
+              <div class="commerce-footer"><span>PREMIUM QUALITY</span><span>CUSTOM DESIGNS</span><span>CANADA</span></div>
+            </div>
             <div class="visual-label mono">GDP CLOTHING / COMMERCE</div>
           </div>
           <div class="case-content">
@@ -222,8 +237,8 @@
           <p>Useful operational software has to handle the boring-but-critical pieces: print flows, stock thresholds, permissions, security, role assignment, and the moments where one wrong click can cause a downstream problem.</p>
         </div>
         <div class="proof-images">
-          <figure><img src="assets/glassflow-pick-sheet.webp" alt="Glass Flow print pick sheet dialog" loading="lazy" /><figcaption>Pick-sheet workflow</figcaption></figure>
-          <figure><img src="assets/glassflow-settings.webp" alt="Glass Flow stock threshold settings" loading="lazy" /><figcaption>Operational settings</figcaption></figure>
+          <figure class="proof-mock"><div class="mock-window"><div class="mock-head"><b>Pick Sheet #1048</b><span>Ready to print</span></div><div class="mock-row"><i></i><strong>FW-209</strong><span>A3</span><em>2 pcs</em></div><div class="mock-row"><i></i><strong>DW-114</strong><span>DB</span><em>1 pc</em></div><div class="mock-row"><i></i><strong>MOLD-48</strong><span>M2</span><em>3 pcs</em></div><div class="mock-action">PRINT PICK SHEET</div></div><figcaption>Pick-sheet workflow</figcaption></figure>
+          <figure class="proof-mock"><div class="mock-window"><div class="mock-head"><b>Inventory Controls</b><span>Warehouse settings</span></div><div class="setting-row"><span>Low-stock threshold</span><strong>12</strong></div><div class="setting-row"><span>Critical-stock threshold</span><strong>5</strong></div><div class="setting-row"><span>Require adjustment reason</span><i class="toggle-on"></i></div><div class="setting-row"><span>Audit inventory moves</span><i class="toggle-on"></i></div></div><figcaption>Operational settings</figcaption></figure>
         </div>
       </div>
     </section>
@@ -238,7 +253,7 @@
         <div class="contact-actions">
           <a class="contact-link" href="mailto:Pangilinan2016@yahoo.com"><small>Email</small><strong>Pangilinan2016@yahoo.com</strong><span>↗</span></a>
           <a class="contact-link" href="https://github.com/gdpclothings-collab" target="_blank" rel="noopener"><small>GitHub</small><strong>gdpclothings-collab</strong><span>↗</span></a>
-          <a class="contact-link" href="Gerald-Pangilinan-Resume.pdf" target="_blank" rel="noopener"><small>Résumé</small><strong>View PDF</strong><span>↗</span></a>
+          <a class="contact-link" href="resume.html" target="_blank" rel="noopener"><small>Résumé</small><strong>View PDF</strong><span>↗</span></a>
         </div>
       </div>
     </section>
