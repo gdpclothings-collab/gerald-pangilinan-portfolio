@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#07151f">
-  <meta name="description" content="Portfolio concept for a modern windshield repair and auto-glass business website.">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071a2c">
+  <meta name="description" content="Portfolio concept for a conversion-focused windshield repair and auto-glass website.">
   <title>Prairie Auto Glass | Portfolio Demo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,84 +12,141 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="demo-bar">PORTFOLIO CONCEPT • FICTIONAL AUTO-GLASS BUSINESS</div>
+  <div class="demo-bar">PORTFOLIO DEMO • FICTIONAL AUTO-GLASS BUSINESS • SAMPLE CONTENT ONLY</div>
+  <div class="utility-bar" aria-label="Example shop highlights">
+    <span>📍 Saskatoon & surrounding areas</span><span>◷ Mon–Sat example hours</span><span>✓ Insurance assistance</span><span>◉ ADAS-aware quoting</span>
+  </div>
+
   <header class="header">
-    <a class="brand" href="#top"><span class="mark">P</span><span><b>PRAIRIE</b><small>AUTO GLASS</small></span></a>
-    <nav id="nav"><a href="#services">Services</a><a href="#check">Repair or Replace?</a><a href="service.html?type=insurance">Insurance</a><a href="#reviews">Reviews</a></nav>
-    <div class="header-actions"><a class="phone" href="tel:+13065550188">306-555-0188</a><a class="button small" href="#quote">Free Quote</a><button id="menu" class="menu" aria-label="Toggle menu">☰</button></div>
+    <a class="brand" href="#top" aria-label="Prairie Auto Glass demo home"><span class="mark">P</span><span><b>PRAIRIE</b><small>AUTO GLASS</small></span></a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#quote">Get a Quote</a><a href="#check">Repair or Replace?</a><a href="service.html?type=insurance">Insurance</a><a href="#reviews">Reviews</a><a href="#areas">Service Area</a>
+    </nav>
+    <div class="header-actions"><a class="phone" href="tel:+13065550188">306-555-0188</a><a class="button small" href="#quote">Free Quote</a><button id="menu" class="menu" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
   </header>
+  <div id="navBackdrop" class="nav-backdrop" hidden></div>
 
   <main id="top">
     <section class="hero">
+      <div class="hero-media" role="img" aria-label="Auto glass technician applying sealant near a vehicle windshield"></div>
+      <div class="hero-overlay"></div>
       <div class="hero-copy">
-        <span class="eyebrow">SASKATOON AUTO GLASS • SAME-DAY OPTIONS</span>
+        <span class="eyebrow">WINDSHIELD REPAIR • REPLACEMENT • MOBILE • ADAS</span>
         <h1>Cracked windshield?<br><em>Make the next step easy.</em></h1>
-        <p>A conversion-focused website concept for windshield repair, replacement, mobile service and ADAS calibration.</p>
-        <div class="actions"><a class="button large" href="#quote">Get My Free Quote →</a><a class="button ghost large" href="tel:+13065550188">Call Now</a></div>
-        <div class="trust"><div><strong>4.9 ★★★★★</strong><span>Sample review score</span></div><div><strong>Mobile</strong><span>Service option</span></div><div><strong>ADAS</strong><span>Calibration education</span></div></div>
+        <p>A polished auto-glass website concept built around the actions real customers take: understand the service, send vehicle details, share damage, and request a quote.</p>
+        <div class="actions"><a class="button large" href="#quote">Get a Free Quote →</a><a class="button ghost large" href="tel:+13065550188">Call 306-555-0188</a></div>
+        <div class="hero-trust" aria-label="Demo capabilities">
+          <div><span class="trust-icon">⌁</span><b>Vehicle-specific</b><small>Year, make, model & features</small></div>
+          <div><span class="trust-icon">▣</span><b>Photo-first</b><small>Damage upload in the quote flow</small></div>
+          <div><span class="trust-icon">◎</span><b>ADAS-aware</b><small>Camera & sensor questions early</small></div>
+        </div>
       </div>
-      <div class="windshield" aria-label="Stylized windshield damage graphic">
-        <div class="sensor"></div><div class="crack"></div><div class="scan"></div><span class="damage">Damage detected</span>
-        <div class="float-card one"><b>✓ Repair screening</b><small>Vehicle + photo details</small></div>
-        <div class="float-card two"><b>◎ ADAS ready</b><small>Calibration when needed</small></div>
-      </div>
+      <aside class="hero-quote" aria-label="Quote preview">
+        <div class="hero-quote-head"><span>60-SECOND QUOTE</span><b>1 / 3</b></div>
+        <h2>Start with the vehicle.</h2>
+        <p>Better details up front mean less back-and-forth later.</p>
+        <div class="mini-fields"><span>Year</span><span>Make</span><span>Model</span></div>
+        <a class="button full" href="#quote">Start Quote →</a>
+        <small>Demo form — no customer data is sent.</small>
+      </aside>
+      <div class="photo-credit">Demo photo: UK CAR GLASS / Pexels</div>
     </section>
 
-    <section class="proof"><span>Insurance assistance</span><i></i><span>Mobile service</span><i></i><span>Vehicle-specific quotes</span><i></i><span>ADAS calibration</span></section>
+    <section class="service-strip" aria-label="Auto glass service categories">
+      <a href="service.html?type=repair"><span>◌</span><b>Chip Repair</b><small>Damage screening</small></a>
+      <a href="service.html?type=replacement"><span>▱</span><b>Replacement</b><small>Glass & sensor options</small></a>
+      <a href="service.html?type=mobile"><span>▰</span><b>Mobile Service</b><small>Home or workplace</small></a>
+      <a href="service.html?type=adas"><span>◎</span><b>ADAS Calibration</b><small>Camera awareness</small></a>
+      <a href="service.html?type=insurance"><span>◇</span><b>Insurance</b><small>Claim guidance</small></a>
+    </section>
 
     <section class="quote" id="quote">
-      <div class="quote-copy"><span class="eyebrow dark">FAST QUOTE REQUEST</span><h2>Collect the details the shop actually needs.</h2><p>Instead of a generic contact form, this flow captures vehicle, damage, service preference and contact details before follow-up.</p><ol><li><b>Vehicle first</b><span>Year, make, model and glass location.</span></li><li><b>Damage screening</b><span>Repair, crack, replacement or calibration.</span></li><li><b>Contact & area</b><span>Enough information to follow up efficiently.</span></li></ol></div>
+      <div class="quote-copy">
+        <span class="eyebrow dark">FAST QUOTE REQUEST</span><h2>Collect what the shop needs before the first callback.</h2>
+        <p>A purpose-built auto-glass intake is more useful than a generic “name, email, message” form. It can surface vehicle features and service needs that affect the conversation.</p>
+        <div class="quote-benefits">
+          <article><b>01</b><div><strong>Identify the glass</strong><span>Vehicle, glass location and VIN optionality.</span></div></article>
+          <article><b>02</b><div><strong>Understand the job</strong><span>Damage, mobile preference, sensors and insurance intent.</span></div></article>
+          <article><b>03</b><div><strong>Follow up efficiently</strong><span>Contact details, service area and uploaded damage photo.</span></div></article>
+        </div>
+      </div>
       <div class="quote-card">
-        <div class="quote-head"><div><span>FREE • NO OBLIGATION</span><h3>Get a fast quote</h3></div><b>~60 sec</b></div>
-        <div class="progress"><span id="progress"></span></div>
-        <div class="steps"><span class="active">1 Vehicle</span><span>2 Service</span><span>3 Contact</span></div>
+        <div class="quote-head"><div><span>FREE • NO OBLIGATION</span><h3>Get a fast quote</h3></div><b id="stepCount">Step 1 of 3</b></div>
+        <div class="progress" aria-hidden="true"><span id="progress"></span></div>
+        <div class="steps" aria-label="Quote steps"><span class="active">1 Vehicle</span><span>2 Service</span><span>3 Contact</span></div>
         <form id="quoteForm" novalidate>
           <div class="form-step active" data-step="1">
-            <div class="grid three"><label>Year<input name="year" maxlength="4" inputmode="numeric" placeholder="2022" required></label><label>Make<input name="make" placeholder="Toyota" required></label><label>Model<input name="model" placeholder="RAV4" required></label></div>
-            <label>Which glass is damaged?<select name="glass" required><option value="">Choose one</option><option>Front windshield</option><option>Rear glass</option><option>Driver side glass</option><option>Passenger side glass</option><option>Not sure</option></select></label>
-            <button type="button" class="button full next">Continue →</button>
+            <div class="grid three"><label>Year<input name="year" maxlength="4" inputmode="numeric" pattern="(19|20)\d{2}" placeholder="2022" required></label><label>Make<input name="make" placeholder="Toyota" autocomplete="off" required></label><label>Model<input name="model" placeholder="RAV4" autocomplete="off" required></label></div>
+            <label>Which glass is damaged?<select name="glass" required><option value="">Choose one</option><option>Front windshield</option><option>Rear glass</option><option>Driver side glass</option><option>Passenger side glass</option><option>Quarter / vent glass</option><option>Not sure</option></select></label>
+            <label>VIN <small>(optional — useful for exact glass options)</small><input name="vin" maxlength="17" autocapitalize="characters" placeholder="17-character VIN"></label>
+            <button type="button" class="button full next">Continue to service →</button>
           </div>
           <div class="form-step" data-step="2">
             <label>What best describes the damage?<select name="service" required><option value="">Choose one</option><option>Rock chip / small damage</option><option>Long crack</option><option>Shattered / broken</option><option>Replacement quote</option><option>ADAS calibration question</option><option>Not sure</option></select></label>
-            <fieldset><legend>Preferred service</legend><label class="choice"><input type="radio" name="location" value="In-shop" checked><span><b>In-shop</b><small>Bring the vehicle to the shop</small></span></label><label class="choice"><input type="radio" name="location" value="Mobile"><span><b>Mobile</b><small>Home or workplace</small></span></label></fieldset>
-            <label class="upload"><input id="photo" type="file" accept="image/*"><span>＋</span><span><b id="photoText">Add a damage photo</b><small>Optional</small></span></label>
-            <label class="checkline"><input type="checkbox"> May be an insurance claim</label>
-            <div class="form-actions"><button type="button" class="button secondary back">Back</button><button type="button" class="button next">Continue →</button></div>
+            <fieldset><legend>Preferred service</legend><div class="choice-grid"><label class="choice"><input type="radio" name="location" value="In-shop" checked><span><b>In-shop</b><small>Bring the vehicle to the shop</small></span></label><label class="choice"><input type="radio" name="location" value="Mobile"><span><b>Mobile</b><small>Home or workplace, if eligible</small></span></label></div></fieldset>
+            <fieldset><legend>Windshield features <small>(choose any that apply)</small></legend><div class="feature-grid"><label><input type="checkbox" name="features" value="camera"> Camera near mirror</label><label><input type="checkbox" name="features" value="rain"> Rain sensor</label><label><input type="checkbox" name="features" value="heated"> Heated glass / wipers</label><label><input type="checkbox" name="features" value="hud"> Heads-up display</label></div></fieldset>
+            <label class="upload"><input id="photo" type="file" accept="image/*"><span class="upload-icon">＋</span><span><b id="photoText">Add a damage photo</b><small id="photoHelp">Optional • JPG, PNG or HEIC</small></span><span id="photoStatus" class="upload-status">Not selected</span></label>
+            <label class="checkline"><input type="checkbox" name="insurance"> This may be an insurance claim</label>
+            <div class="form-actions"><button type="button" class="button secondary back">← Back</button><button type="button" class="button next">Continue to contact →</button></div>
           </div>
           <div class="form-step" data-step="3">
-            <div class="grid two"><label>Name<input name="name" autocomplete="name" required></label><label>Phone<input name="phone" type="tel" autocomplete="tel" required></label></div>
-            <label>Email <small>(optional)</small><input name="email" type="email" autocomplete="email"></label><label>Postal code / area<input name="postal" placeholder="S7K 0A1" required></label>
-            <div class="form-actions"><button type="button" class="button secondary back">Back</button><button type="submit" class="button">Request My Quote</button></div>
-            <p class="note">Demo only. A production version can route this to email, CRM or a secure dashboard.</p>
+            <div class="grid two"><label>Name<input name="name" autocomplete="name" required></label><label>Phone<input id="phoneInput" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="306-555-0123" required></label></div>
+            <label>Email <small>(optional)</small><input name="email" type="email" autocomplete="email" placeholder="name@example.com"></label>
+            <label>Postal code / service area<input id="postalInput" name="postal" maxlength="7" autocapitalize="characters" placeholder="S7K 0A1" pattern="[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d" required></label>
+            <label>Anything else? <small>(optional)</small><textarea name="notes" rows="3" placeholder="Example: crack started at passenger edge, camera behind mirror"></textarea></label>
+            <div class="form-actions"><button type="button" class="button secondary back">← Back</button><button type="submit" class="button">Request My Quote</button></div>
+            <p class="note">Demo only. A production version would send this securely to the shop’s approved email, CRM or dashboard.</p>
           </div>
-          <div id="success" class="success"><span>✓</span><h3>Quote request ready.</h3><p>This demonstrates the full customer flow without sending real data.</p><button type="button" id="reset" class="button secondary">Start another</button></div>
+          <div id="success" class="success" aria-live="polite"><span>✓</span><h3>Quote request ready.</h3><p>The customer would now see a confirmation while the shop receives the structured lead.</p><button type="button" id="reset" class="button secondary">Start another</button></div>
         </form>
       </div>
     </section>
 
-    <section class="section" id="services"><div class="heading"><div><span class="eyebrow dark">AUTO GLASS SERVICES</span><h2>Every core service has a clear path.</h2></div><p>Specialized landing pages help customers understand the right service and create stronger local-search opportunities.</p></div>
+    <section class="section" id="services">
+      <div class="heading"><div><span class="eyebrow dark">AUTO GLASS SERVICES</span><h2>Specialized pages, not generic filler.</h2></div><p>Each service gets its own conversion path and can later be tailored to a real shop’s procedures, warranty, service area and glass suppliers.</p></div>
       <div class="cards">
-        <article><span>01</span><h3>Windshield Repair</h3><p>Rock-chip and minor-damage screening before cracks spread.</p><a href="service.html?type=repair">Explore repair →</a></article>
-        <article><span>02</span><h3>Windshield Replacement</h3><p>Vehicle-specific replacement with clear installation expectations.</p><a href="service.html?type=replacement">Explore replacement →</a></article>
-        <article><span>03</span><h3>Mobile Auto Glass</h3><p>High-visibility mobile service for eligible home and workplace jobs.</p><a href="service.html?type=mobile">Explore mobile service →</a></article>
-        <article><span>04</span><h3>ADAS Calibration</h3><p>Explain forward-facing cameras and calibration after replacement.</p><a href="service.html?type=adas">Explore ADAS →</a></article>
+        <article><span class="service-icon">◌</span><div class="card-number">01</div><h3>Windshield Repair</h3><p>Rock-chip screening with clear limits and a photo-first quote path.</p><a href="service.html?type=repair">Explore repair →</a></article>
+        <article><span class="service-icon">▱</span><div class="card-number">02</div><h3>Windshield Replacement</h3><p>Vehicle-specific quoting that accounts for cameras, sensors and options.</p><a href="service.html?type=replacement">Explore replacement →</a></article>
+        <article><span class="service-icon">▰</span><div class="card-number">03</div><h3>Mobile Auto Glass</h3><p>Eligibility, service area, weather expectations and convenient scheduling.</p><a href="service.html?type=mobile">Explore mobile service →</a></article>
+        <article><span class="service-icon">◎</span><div class="card-number">04</div><h3>ADAS Calibration</h3><p>Plain-language education for camera-equipped windshield replacements.</p><a href="service.html?type=adas">Explore ADAS →</a></article>
       </div>
     </section>
 
-    <section class="diagnostic" id="check"><div><span class="eyebrow">REPAIR OR REPLACE?</span><h2>Reduce uncertainty before the customer calls.</h2><p>This quick screen guides the next step while leaving the final decision to a technician.</p><ul><li>Damage size and type</li><li>Location near edge or sight line</li><li>Depth and contamination</li></ul></div>
-      <div class="checker"><div id="question"><h3>Where is the damage?</h3><button data-result="inspect">Driver’s direct line of sight →</button><button data-result="inspect">Near the windshield edge →</button><button data-result="repair">Away from the edge / centre →</button><small>Screening only — final assessment belongs to a technician.</small></div><div id="result" hidden><span>SCREENING RESULT</span><h3 id="resultTitle"></h3><p id="resultText"></p><a class="button full" href="#quote">Send details for assessment</a><button id="restart" class="text-button">Start over</button></div></div>
+    <section class="tech-trust">
+      <div><span class="eyebrow">AUTO-GLASS DETAILS CUSTOMERS ASK ABOUT</span><h2>Make the website sound like the industry.</h2><p>A real client version can surface the technical details that influence glass selection, installation and customer expectations without overwhelming the buyer.</p></div>
+      <div class="trust-grid">
+        <article><b>VIN & options</b><span>Use the VIN when needed to identify camera brackets, acoustic glass, tint, heating and HUD options.</span></article>
+        <article><b>OEM vs aftermarket</b><span>Explain the shop’s actual glass options honestly instead of using blanket quality claims.</span></article>
+        <article><b>Safe drive-away</b><span>Show the shop’s verified urethane/cure-time guidance and technician instructions.</span></article>
+        <article><b>Warranty</b><span>Present the real workmanship/leak warranty and exclusions in clear customer language.</span></article>
+      </div>
     </section>
 
-    <section class="journey"><div class="heading light"><div><span class="eyebrow">CUSTOMER JOURNEY</span><h2>Designed to turn search traffic into jobs.</h2></div></div><div class="journey-grid"><article><b>1</b><h3>Find</h3><p>Service-specific content answers intent.</p></article><article><b>2</b><h3>Trust</h3><p>Reviews, process and education reduce uncertainty.</p></article><article><b>3</b><h3>Capture</h3><p>The quote flow gathers useful details.</p></article><article><b>4</b><h3>Close</h3><p>The shop follows up with better context.</p></article></div></section>
+    <section class="diagnostic" id="check">
+      <div><span class="eyebrow">REPAIR OR REPLACE?</span><h2>A better pre-screen before the customer calls.</h2><p>This educational tool asks several factors instead of pretending one question can decide the repair. The final assessment still belongs to a qualified technician.</p><ul><li>Damage type & approximate size</li><li>Edge proximity & direct sight line</li><li>Multiple impacts & contamination</li><li>Photo and vehicle details for follow-up</li></ul></div>
+      <div class="checker">
+        <div class="diag-progress"><span id="diagProgress">Question 1 of 4</span><div><i id="diagBar"></i></div></div>
+        <div id="diagQuestion"></div>
+        <div id="diagResult" hidden><span class="result-label">SCREENING RESULT</span><h3 id="resultTitle"></h3><p id="resultText"></p><div id="resultFlags" class="result-flags"></div><a class="button full" href="#quote">Send details for assessment</a><button id="restart" class="text-button">Start over</button></div>
+      </div>
+    </section>
 
-    <section class="reviews" id="reviews"><div class="score"><strong>4.9</strong><span>★★★★★</span><small>SAMPLE REVIEW PRESENTATION</small></div><blockquote>“The quote process was simple. I could send the vehicle details and understand what would happen next.”<footer>— Sample customer • Windshield service</footer></blockquote></section>
+    <section class="process">
+      <div class="heading"><div><span class="eyebrow dark">CUSTOMER JOURNEY</span><h2>Built to move from search to quote.</h2></div><p>For a real shop, every step can be connected to analytics so we can see where customers drop off and improve the flow.</p></div>
+      <div class="journey-grid"><article><b>1</b><h3>Find</h3><p>Local/service pages answer specific search intent.</p></article><article><b>2</b><h3>Trust</h3><p>Technical clarity, verified reviews and real shop proof reduce uncertainty.</p></article><article><b>3</b><h3>Capture</h3><p>A structured quote flow collects useful vehicle and damage details.</p></article><article><b>4</b><h3>Follow up</h3><p>The shop receives a lead with enough context to respond efficiently.</p></article></div>
+    </section>
 
-    <section class="section areas"><div><span class="eyebrow dark">LOCAL SERVICE AREA</span><h2>Built for local search, not a generic contact page.</h2><p>A real client build would use verified service areas, hours, Google Business Profile information and local content.</p><div class="chips"><span>Saskatoon</span><span>Martensville</span><span>Warman</span><span>Dalmeny</span><span>Osler</span></div></div><div class="map"><span>P</span><b>Prairie Auto Glass</b><small>Demo service radius</small></div></section>
+    <section class="reviews" id="reviews">
+      <div class="review-label"><span>REVIEW INTEGRATION DEMO</span><strong>Google reviews can appear here</strong><p>No fake rating is presented as real. A production site would pull or display verified customer feedback approved by the shop.</p></div>
+      <div class="review-card"><div class="stars">★★★★★</div><blockquote>“Sample layout: quick response, clear explanation, and an easy quote process.”</blockquote><footer>Placeholder review presentation</footer><div class="review-dots"><i class="active"></i><i></i><i></i></div></div>
+    </section>
 
-    <section class="final"><span class="eyebrow">GET BACK ON THE ROAD</span><h2>Send the vehicle details.<br>Take it from there.</h2><p>Clear next step. No account creation. No confusing funnel.</p><div class="actions center"><a class="button light large" href="#quote">Get a Free Quote</a><a class="button outline large" href="tel:+13065550188">Call 306-555-0188</a></div></section>
+    <section class="section areas" id="areas"><div><span class="eyebrow dark">LOCAL SERVICE AREA</span><h2>Give local customers a clear answer.</h2><p>A client build should use only verified cities, radius, shop hours and mobile-service limitations. These locations are illustrative for the demo.</p><div class="chips"><span>Saskatoon</span><span>Martensville</span><span>Warman</span><span>Dalmeny</span><span>Osler</span></div></div><div class="map"><div class="map-ring one"></div><div class="map-ring two"></div><span>P</span><b>Prairie Auto Glass</b><small>Illustrative service radius</small></div></section>
+
+    <section class="final"><span class="eyebrow">CLEAR NEXT STEP</span><h2>Vehicle details first.<br>Less back-and-forth later.</h2><p>A specialized website should make it easy for customers to do the next useful thing.</p><div class="actions center"><a class="button light large" href="#quote">Get a Free Quote</a><a class="button outline large" href="tel:+13065550188">Call 306-555-0188</a></div></section>
   </main>
 
-  <footer><div class="brand"><span class="mark">P</span><span><b>PRAIRIE</b><small>AUTO GLASS</small></span></div><p>Fictional concept created as a portfolio demonstration for windshield and auto-glass businesses.</p><small>Company name, phone, reviews and service claims are illustrative only.</small></footer>
+  <footer class="site-footer"><div class="brand"><span class="mark">P</span><span><b>PRAIRIE</b><small>AUTO GLASS</small></span></div><p>Fictional portfolio concept created to demonstrate a specialized website for windshield and auto-glass businesses.</p><small>Company name, phone number, locations, hours, warranty references, reviews and service claims are illustrative. Technician photo sourced from Pexels (UK CAR GLASS).</small></footer>
   <div class="mobile-cta"><a href="tel:+13065550188">☎ Call</a><a href="#quote">Free Quote →</a></div>
   <script src="script.js"></script>
 </body>
