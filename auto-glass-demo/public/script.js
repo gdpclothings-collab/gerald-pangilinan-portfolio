@@ -1,7 +1,8 @@
 const $=(s,c=document)=>c.querySelector(s);const $$=(s,c=document)=>[...c.querySelectorAll(s)];
 
-// Load final refinement layer after the base stylesheet.
-if(!document.querySelector('link[href="refinements.css"]')){const l=document.createElement('link');l.rel='stylesheet';l.href='refinements.css';document.head.appendChild(l)}
+// Load final refinement layer relative to this script so both /auto-glass-demo/
+// and /auto-glass-demo/public/ resolve the stylesheet correctly.
+if(!document.querySelector('link[data-auto-glass-refinements]')){const l=document.createElement('link');l.rel='stylesheet';l.dataset.autoGlassRefinements='true';const src=document.currentScript?.src;l.href=src?new URL('refinements.css',src).href:'refinements.css';document.head.appendChild(l)}
 
 // Mobile navigation
 const menu=$('#menu'),nav=$('#nav'),backdrop=$('#navBackdrop');
