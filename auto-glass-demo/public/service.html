@@ -1,28 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#071a2c">
-  <meta name="description" content="Prairie Auto Glass portfolio demo service page."><title>Auto Glass Service | Prairie Auto Glass Demo</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071a2c">
+  <meta name="description" content="Prairie Auto Glass portfolio demo service page.">
+  <title>Auto Glass Service | Prairie Auto Glass Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="refinements.css">
 </head>
-<body>
+<body class="service-shell">
   <div class="demo-bar">PORTFOLIO DEMO • FICTIONAL AUTO-GLASS BUSINESS • SAMPLE CONTENT ONLY</div>
-  <main class="service-page">
-    <a class="back" href="index.html">← Back to Prairie Auto Glass demo</a>
-    <section class="service-hero"><span class="eyebrow dark" id="kicker">AUTO GLASS SERVICE</span><h1 id="title">Windshield Service</h1><p id="intro"></p><div class="actions"><a class="button large" href="index.html#quote">Request a Quote →</a><a class="button secondary large" href="tel:+13065550188">Call 306-555-0188</a></div></section>
-    <section class="service-grid" id="points"></section>
-    <div class="service-note" id="note"></div>
-    <section class="service-cta"><h2 id="ctaTitle"></h2><p id="ctaText"></p><a class="button light" href="index.html#quote">Start the quote request</a></section>
+  <header class="service-topbar">
+    <a class="brand" href="../" aria-label="Prairie Auto Glass demo home"><span class="mark">P</span><span><b>PRAIRIE</b><small>AUTO GLASS</small></span></a>
+    <nav class="service-nav" aria-label="Service page navigation"><a href="../#services">Services</a><a href="../#quote">Get a Quote</a><a href="../#check">Repair or Replace?</a><a href="../#areas">Service Area</a></nav>
+    <a class="button small" href="../#quote">Free Quote</a>
+  </header>
+
+  <main class="service-wrap">
+    <div class="service-breadcrumb"><a href="../">Prairie Auto Glass</a><span>›</span><span id="crumb">Service</span></div>
+
+    <section class="service-hero-v2">
+      <div>
+        <div class="service-icon-xl" id="serviceIcon">◌</div>
+        <span class="eyebrow dark" id="kicker">AUTO GLASS SERVICE</span>
+        <h1 id="title">Windshield Service</h1>
+        <p id="intro"></p>
+        <div class="actions"><a class="button large" href="../#quote">Request a Quote →</a><a class="button secondary large" href="tel:+13065550188">Call 306-555-0188</a></div>
+      </div>
+      <aside class="service-summary">
+        <small>WHAT A GOOD PAGE SHOULD ANSWER</small>
+        <h2>Before the customer calls</h2>
+        <ul id="summaryList"></ul>
+      </aside>
+    </section>
+
+    <section class="service-grid-v2" id="points"></section>
+    <section class="service-note-v2"><b>!</b><p id="note"></p></section>
+
+    <section class="related-services">
+      <span class="eyebrow dark">RELATED SERVICES</span>
+      <h2>Keep the next step close.</h2>
+      <div class="related-links" id="relatedLinks"></div>
+    </section>
+
+    <section class="service-cta-v2">
+      <div><h2 id="ctaTitle"></h2><p id="ctaText"></p></div>
+      <a class="button light large" href="../#quote">Start the quote request →</a>
+    </section>
   </main>
+
+  <footer class="service-footer">Fictional portfolio concept. Company name, phone number, service claims, warranty details, insurance workflows and technical procedures are illustrative until replaced with a real client’s verified information.</footer>
+  <div class="mobile-cta"><a href="tel:+13065550188">☎ Call</a><a href="../#quote">Free Quote →</a></div>
+
   <script>
   const data={
-    repair:{k:'WINDSHIELD REPAIR',t:'Rock-chip repair should feel simple.',i:'A focused service page can explain which damage may be repairable, encourage customers to act before a chip spreads, and move them directly into a useful quote request.',p:[['Photo-first screening','Let the customer send a damage photo before the shop follows up.'],['Repair factors','Size, depth, edge location, sight line, contamination and prior repairs can affect suitability.'],['Fast conversion path','Keep quote and call actions visible instead of burying them in navigation.']],n:'A real shop should publish only its technician-approved repair criteria. The website should guide the customer, not guarantee a repair from a photo alone.',ct:'Turn small damage into a fast lead.',cx:'The final repair decision belongs to a qualified technician, but the website can reduce uncertainty and collect the right information first.'},
-    replacement:{k:'WINDSHIELD REPLACEMENT',t:'Replacement pages should build confidence.',i:'Customers want to know what affects the quote, whether their vehicle has cameras or sensors, and what happens after installation.',p:[['Vehicle & VIN','Year, make, model and sometimes VIN help identify acoustic glass, camera brackets, heating, HUD and other options.'],['Glass & installation','Use the shop’s verified language for OEM/aftermarket choices, primers, urethane, moldings, warranty and safe drive-away guidance.'],['ADAS awareness','Flag camera-equipped vehicles early so calibration requirements are part of the conversation.']],n:'Calibration requirements, glass options and cure times vary by vehicle and shop procedure. A production site should use verified shop-specific information.',ct:'Make the replacement process easy to understand.',cx:'A strong page answers the major questions before the customer calls and gives the shop better lead information.'},
-    mobile:{k:'MOBILE AUTO GLASS',t:'Bring the service option to the customer.',i:'Mobile-service customers need quick confirmation that their location and job may be eligible, plus clear expectations around weather and workspace requirements.',p:[['Verified service area','Show the actual cities, radius and travel limitations the shop serves.'],['Home or workplace','Make mobile service a first-class option in the quote flow.'],['Eligibility guidance','Explain that weather, safe workspace, calibration needs and service type can affect mobile availability.']],n:'Mobile availability should never be promised automatically. The shop can confirm eligibility after reviewing the vehicle, location and job requirements.',ct:'Make mobile service visible from the first screen.',cx:'For shops that offer mobile work, convenience can be a major conversion advantage when the website makes it obvious.'},
-    adas:{k:'ADAS CALIBRATION',t:'Explain camera calibration without the jargon.',i:'Modern windshields may interact with forward-facing cameras and driver-assistance systems. A dedicated page helps customers understand why calibration may be discussed after replacement.',p:[['Camera-equipped vehicles','Explain where a forward-facing camera is commonly mounted and why the windshield can be part of the system.'],['Vehicle-specific procedure','Static, dynamic or combined procedures can vary by make/model and repair information.'],['Documentation','A real shop can explain its verified calibration capability, equipment, sublet process and records.']],n:'Do not imply that every windshield replacement needs the same calibration process. Production copy should match OEM/service information and the shop’s actual capability.',ct:'Turn a technical topic into customer confidence.',cx:'The website should educate without pretending every vehicle follows the same calibration procedure.'},
-    insurance:{k:'INSURANCE ASSISTANCE',t:'Help with claims without over-collecting data.',i:'The public website can explain the shop’s insurance process and ask whether a claim may be involved without requesting unnecessary sensitive policy information.',p:[['Simple first question','Ask whether insurance may be involved: yes, no or not sure.'],['Explain the workflow','Use the client’s verified direct-billing, deductible and claim-contact process.'],['Protect customer data','Move policy numbers and other sensitive details into the shop’s approved secure process when necessary.']],n:'Insurance programs and direct-billing arrangements vary. A real client page should name only insurers/programs the shop actually supports.',ct:'Make insurance guidance helpful, not invasive.',cx:'This demo deliberately keeps policy numbers and other sensitive information out of the public lead form.'}
+    repair:{icon:'◌',k:'WINDSHIELD REPAIR',t:'Rock-chip repair should feel simple.',i:'A focused service page can explain which damage may be repairable, encourage customers to act before a chip spreads, and move them directly into a useful quote request.',p:[['Photo-first screening','Let the customer send a damage photo before the shop follows up.'],['Repair factors','Size, depth, edge location, sight line, contamination and prior repairs can affect suitability.'],['Fast conversion path','Keep quote and call actions visible instead of burying them in navigation.']],s:['What damage may be repairable','What factors require inspection','How quickly the shop can respond'],n:'A real shop should publish only its technician-approved repair criteria. The website should guide the customer, not guarantee a repair from a photo alone.',ct:'Turn small damage into a fast lead.',cx:'The final repair decision belongs to a qualified technician, but the website can reduce uncertainty and collect the right information first.'},
+    replacement:{icon:'▱',k:'WINDSHIELD REPLACEMENT',t:'Replacement pages should build confidence.',i:'Customers want to know what affects the quote, whether their vehicle has cameras or sensors, and what happens after installation.',p:[['Vehicle & VIN','Year, make, model and sometimes VIN help identify acoustic glass, camera brackets, heating, HUD and other options.'],['Glass & installation','Use the shop’s verified language for OEM/aftermarket choices, primers, urethane, moldings, warranty and safe drive-away guidance.'],['ADAS awareness','Flag camera-equipped vehicles early so calibration requirements are part of the conversation.']],s:['Which glass fits the vehicle','What options or sensors matter','What happens after installation'],n:'Calibration requirements, glass options and cure times vary by vehicle and shop procedure. A production site should use verified shop-specific information.',ct:'Make the replacement process easy to understand.',cx:'A strong page answers the major questions before the customer calls and gives the shop better lead information.'},
+    mobile:{icon:'▰',k:'MOBILE AUTO GLASS',t:'Bring the service option to the customer.',i:'Mobile-service customers need quick confirmation that their location and job may be eligible, plus clear expectations around weather and workspace requirements.',p:[['Verified service area','Show the actual cities, radius and travel limitations the shop serves.'],['Home or workplace','Make mobile service a first-class option in the quote flow.'],['Eligibility guidance','Explain that weather, safe workspace, calibration needs and service type can affect mobile availability.']],s:['Where mobile service is offered','What jobs are eligible','What weather/workspace limits apply'],n:'Mobile availability should never be promised automatically. The shop can confirm eligibility after reviewing the vehicle, location and job requirements.',ct:'Make mobile service visible from the first screen.',cx:'For shops that offer mobile work, convenience can be a major conversion advantage when the website makes it obvious.'},
+    adas:{icon:'◎',k:'ADAS CALIBRATION',t:'Explain camera calibration without the jargon.',i:'Modern windshields may interact with forward-facing cameras and driver-assistance systems. A dedicated page helps customers understand why calibration may be discussed after replacement.',p:[['Camera-equipped vehicles','Explain where a forward-facing camera is commonly mounted and why the windshield can be part of the system.'],['Vehicle-specific procedure','Static, dynamic or combined procedures can vary by make/model and repair information.'],['Documentation','A real shop can explain its verified calibration capability, equipment, sublet process and records.']],s:['Why calibration may be required','Whether the shop performs or sublets it','What documentation is provided'],n:'Do not imply that every windshield replacement needs the same calibration process. Production copy should match OEM/service information and the shop’s actual capability.',ct:'Turn a technical topic into customer confidence.',cx:'The website should educate without pretending every vehicle follows the same calibration procedure.'},
+    insurance:{icon:'◇',k:'INSURANCE ASSISTANCE',t:'Help with claims without over-collecting data.',i:'The public website can explain the shop’s insurance process and ask whether a claim may be involved without requesting unnecessary sensitive policy information.',p:[['Simple first question','Ask whether insurance may be involved: yes, no or not sure.'],['Explain the workflow','Use the client’s verified direct-billing, deductible and claim-contact process.'],['Protect customer data','Move policy numbers and other sensitive details into the shop’s approved secure process when necessary.']],s:['Whether the shop assists with claims','What the customer should prepare','How sensitive details are handled'],n:'Insurance programs and direct-billing arrangements vary. A real client page should name only insurers/programs the shop actually supports.',ct:'Make insurance guidance helpful, not invasive.',cx:'This demo deliberately keeps policy numbers and other sensitive information out of the public lead form.'}
   };
-  const key=new URLSearchParams(location.search).get('type')||'repair',d=data[key]||data.repair;document.title=d.t+' | Prairie Auto Glass Demo';document.querySelector('#kicker').textContent=d.k;document.querySelector('#title').textContent=d.t;document.querySelector('#intro').textContent=d.i;document.querySelector('#ctaTitle').textContent=d.ct;document.querySelector('#ctaText').textContent=d.cx;document.querySelector('#note').textContent=d.n;document.querySelector('#points').innerHTML=d.p.map((x,i)=>`<article><span class="eyebrow dark">0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('');
+  const labels={repair:'Windshield Repair',replacement:'Windshield Replacement',mobile:'Mobile Auto Glass',adas:'ADAS Calibration',insurance:'Insurance Assistance'};
+  const key=new URLSearchParams(location.search).get('type')||'repair',d=data[key]||data.repair;
+  document.title=d.t+' | Prairie Auto Glass Demo';
+  document.querySelector('#serviceIcon').textContent=d.icon;document.querySelector('#kicker').textContent=d.k;document.querySelector('#title').textContent=d.t;document.querySelector('#crumb').textContent=labels[key]||labels.repair;document.querySelector('#intro').textContent=d.i;document.querySelector('#ctaTitle').textContent=d.ct;document.querySelector('#ctaText').textContent=d.cx;document.querySelector('#note').textContent=d.n;
+  document.querySelector('#points').innerHTML=d.p.map((x,i)=>`<article><span>0${i+1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('');
+  document.querySelector('#summaryList').innerHTML=d.s.map(x=>`<li>${x}</li>`).join('');
+  document.querySelector('#relatedLinks').innerHTML=Object.keys(data).filter(k=>k!==key).map(k=>`<a href="service.html?type=${k}">${labels[k]} →</a>`).join('');
   </script>
 </body>
 </html>
